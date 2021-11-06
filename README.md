@@ -50,4 +50,6 @@ This project was created in order to gather data needed to build a chatbot for a
 
 # Updates
 - [ ] Scrape comments found in "view more comments"
+- [ ] Add a file for inputs only
+- [ ] Add comments to the code
 - [ ] Add an option to scrape the general group discussions and not specific topics
