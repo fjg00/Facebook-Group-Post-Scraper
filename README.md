@@ -2,7 +2,6 @@
 # Notes
   - The scraper should only be used for educational purposes
   - Kindly refrain from scraping sensitive or private information
-  - It is highly recommended to scrape public (and not private) groups
   - Ask for consent from the group adminstrator and/or group members before running any code
   - I am not responsible for any misuse of the code in any shape or form
 
