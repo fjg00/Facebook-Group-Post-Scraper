@@ -1,14 +1,9 @@
-"""
-Please note that this code should only be used for educational purposes 
-"""
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from bs4 import BeautifulSoup 
-
-from scraper import extract
 
 import argparse
 import time
@@ -29,7 +24,7 @@ def addvalues(dictionary, key, L):
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--disable-notifications')
 
-driver = webdriver.Chrome('Chrome Driver Directory', options=chrome_options)
+driver = webdriver.Chrome('INSERT CHROME DRIVER DIRECTORY HERE', options=chrome_options) #USER INPUT
 driver.get('https://www.facebook.com/')
 
 email = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"input[name = 'email']")))
@@ -39,8 +34,8 @@ password = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SE
 email.clear()
 password.clear()
 
-email.send_keys("INSERT EMAIL")
-password.send_keys("INSERT PASSWORD")
+email.send_keys("INSERT EMAIL HERE") #USER INPUT
+password.send_keys("INSERT PASSWOR HERE") #USER INPUT
 
 
 login = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"button[type = 'submit']"))).click()
@@ -51,11 +46,11 @@ driver.maximize_window()
 
 n_scrolls = 5
 
-x = "Insert SEARCH PROMPT"
+x = "INSERT SEARCH PROMPT HERE" #USER INPUT
 
 x = x.replace(" ","%20")
 
-driver.get('INSERT GROUP URL'+x)
+driver.get('INSERT GROUP URL HERE'+x) #USER INPUT
 
 text = ""
 comments = ""
@@ -68,7 +63,7 @@ for i in range(1,n_scrolls):
     
     anchor = driver.find_elements_by_tag_name('a')
     anchor = [a.get_attribute('href') for a in anchor]
-    anchor = [a for a in anchor if (str(a).startswith('https://www.facebook.com/groups/GROUPNUMBER/posts/') and 'comment' not in str(a))]
+    anchor = [a for a in anchor if (str(a).startswith('https://www.facebook.com/groups/INSERTGROUPNUMBER/posts/') and 'comment' not in str(a))] #USER INPUT
     
  
 WrapperDict = list() 
@@ -94,7 +89,7 @@ for a in anchor:
         
         for post in actualPosts:
             s = post.get_text()
-            if (s == "GROUP DESCRIPTION"):
+            if (s == "INSERT GROUP DESCRIPTION HERE"): #USER INPUT
                 time.sleep(1)
             elif len(s.split()) < 4:
                 time.sleep(1)
