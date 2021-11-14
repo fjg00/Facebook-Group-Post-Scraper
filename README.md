@@ -43,8 +43,10 @@ This project was created in order to gather data needed to build a chatbot for a
 # Setup Requirements
  1. Make sure chrome is installed
  2. Install [Chromedriver](https://chromedriver.storage.googleapis.com/index.html?path=95.0.4638.54/) and place it in the same directory as the file
- 3. Enter inputs required by the code
- 4. Run the code
+ 3. Install Selenium Library (for anaconda cmd use: conda install -c anaconda selenium)
+ 4. Install Beautiful Soup (for anaconda cmd use: conda install -c anaconda beautifulsoup4)
+ 5. Enter inputs required by the code
+ 6. Run the code
 
 
 # Updates
